@@ -18,3 +18,16 @@ const getMeme = () => {
             ))
 }
 generateMeme.addEventListener('click', getMeme)
+
+let funnyCount = 0;
+    let notFunnyCount = 0;
+
+    function vote(type) {
+        if (type === 'funny') {
+            funnyCount++;
+            document.getElementById('funnyCount').textContent = funnyCount;
+        } else if (type === 'notFunny') {
+            notFunnyCount++;
+            document.getElementById('notFunnyCount').textContent = notFunnyCount;
+        }
+    }
