@@ -19,8 +19,8 @@ const getMeme = () => {
 }
 generateMeme.addEventListener('click', getMeme)
 
-let funnyCount = 0;
-    let notFunnyCount = 0;
+let funnyCount = 35;
+    let notFunnyCount = 65;
 
     function vote(type) {
         if (type === 'funny') {
@@ -30,4 +30,33 @@ let funnyCount = 0;
             notFunnyCount++;
             document.getElementById('notFunnyCount').textContent = notFunnyCount;
         }
+        updatePieChart();
     }
+
+    function updatePieChart() {
+        const totalVotes = funnyCount + notFunnyCount;
+
+        const funnyPercentage = (funnyCount / totalVotes) * 100;
+        const notFunnyPercentage = (notFunnyCount / totalVotes) * 100;
+
+        const pieData = {
+            labels: ['Funny', 'Not Funny'],
+            datasets: [{
+                data: [funnyPercentage, notFunnyPercentage],
+                backgroundColor: ['#36A2EB', '#FF6384'],
+            }],
+        };
+
+        const pieChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+        };
+
+        const pieChart = new Chart(document.getElementById('pieChart'), {
+            type: 'pie',
+            data: pieData,
+            options: pieChartOptions,
+        });
+    }
+    updatePieChart();
+
