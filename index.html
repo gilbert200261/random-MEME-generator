@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <title>Random Meme Generator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         .main {
             display: flex;
@@ -43,6 +44,7 @@
             width: 90%;
             margin: auto;
         }
+
         .button-container {
             width: fit-content;
             background-color: blueviolet;
@@ -51,10 +53,7 @@
             border: none;
             padding: 1rem 2rem;
             border-radius: 8px;
-            
-           
-          }
-
+        }
     </style>
 </head>
 
@@ -68,17 +67,19 @@
             <img src="" alt="" class="memeImg">
         </div>
     </div>
-      
+
     <script src="main.js"></script>
 </body>
 
-
 <h2 class="heading"><span>Funny</span>-Not Funny</h2>
 <div class="piechart"></div>
+
 <button id="funnyButton" onclick="vote('funny')">Funny</button>
 <button id="notFunnyButton" onclick="vote('notFunny')">Not Funny</button>
 
-<p>Number of Funny votes: <span id="funnyCount">0</span></p>
-<p>Number of Not Funny votes: <span id="notFunnyCount">0</span></p>
+<p>Number of Funny votes: <span id="funnyCount">35</span></p>
+<p>Number of Not Funny votes: <span id="notFunnyCount">65</span></p>
+
+<canvas id="pieChart" width="400" height="400"></canvas>
 
 </html>
