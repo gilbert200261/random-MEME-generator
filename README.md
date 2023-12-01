@@ -1,7 +1,7 @@
 # RANDOM MEME GENERATOR
 
 
-Meme generator is a website to interact with clickable button to generate a new meme from free API. It has voting buttons for funny or not funny memes. A chart to show percentage of the funny and not funny memes.
+Meme generator is a website to interact with clickable button to generate a new meme from free API. It has voting buttons for funny or not funny memes. A chart to show percentage of the funny and not funny memes. You can right click on image to save image.
 
 
 PROJECT FEATURES
