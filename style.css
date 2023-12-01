@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
+    background-color: lavender;
 }
 
 h2 {
@@ -22,6 +23,16 @@ button {
 
 #notFunnyCount {
     color: rgb(28, 19, 19);
+}
+
+#funnyButton {
+    background-color: #ffa0a0;
+    color: white;
+}
+
+#notFunnyButton {
+    background-color: #8adaf0;
+    color: white;
 }
 
 .piechart {
@@ -54,4 +65,10 @@ button {
     color: pink;
     justify-content: center;
     align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
 }
