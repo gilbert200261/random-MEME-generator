@@ -21,6 +21,7 @@ generateMeme.addEventListener('click', getMeme)
 
 let funnyCount = 35;
     let notFunnyCount = 65;
+    let pieChart;
 
     function vote(type) {
         if (type === 'funny') {
@@ -30,7 +31,20 @@ let funnyCount = 35;
             notFunnyCount++;
             document.getElementById('notFunnyCount').textContent = notFunnyCount;
         }
-        updatePieChart();
+
+        console.log('Vote function executed');
+
+        clearChart();
+        console.log('Chart cleared');
+        updatePieChart(); 
+        console.log('Chart updated'); 
+    }
+
+    function clearChart() {
+        if (pieChart) {
+            pieChart.destroy();
+            console.log('Chart destroyed');
+        }    
     }
 
     function updatePieChart() {
@@ -57,6 +71,8 @@ let funnyCount = 35;
             data: pieData,
             options: pieChartOptions,
         });
+        console.log('Chart created');
     }
+
     updatePieChart();
 
